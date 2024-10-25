@@ -1,0 +1,282 @@
+/*colors and font family for all pages*/
+:root{
+    --darkColor: #3a486d;
+    --whiteColor: #fff;
+    --blueColor: #2b43e2;
+    --backgroundColor: #6594C0;
+    --heading1Color: #333;
+    --heading2Color: #555;
+}
+
+/*Genral styling for all pages*/ 
+header{
+    font-family: Almarai,Arial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--darkColor);
+    color: var(--whiteColor);
+    margin: -10px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid var(--blueColor);
+    border-top: 5px solid var(--blueColor);
+
+    p{
+        font-size: 40px;
+        margin-top: -0.5px;
+    }
+}
+
+footer{
+    font-family: Almarai,Arial;
+    display: flex;
+
+    background-color: var(--darkColor);
+    color: var(--whiteColor);
+    margin: -10px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid var(--blueColor);
+    border-top: 5px solid var(--blueColor);
+
+    flex-direction: column; 
+    align-items: center; 
+
+    p{
+        font-size: 15px;
+    }
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    float: right;
+    margin-right: 40px; 
+}
+
+a{
+    color: var(--whiteColor);
+    text-decoration: none;
+}
+
+.link{
+    transition: all ease 0.3s;
+    border-radius: 20px;
+}
+
+.link:hover, .link_current{
+    background-color: var(--blueColor);
+    padding: 6px 18px;
+    text-decoration: underline;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: var(--backgroundColor);
+}
+
+main {
+    width: auto; 
+    margin: 20px auto; 
+    padding: 20px; 
+    background: var(--whiteColor); 
+    border-radius: 8px;  
+}
+
+h1 {
+    font-size: 28px;
+    color: var(--heading1Color);
+    margin-bottom: 10px;
+    border-bottom: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--darkColor);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 24px; 
+    color: var(--heading2Color);
+    text-align: center;
+}
+
+p {
+    font-size: 18px; 
+    line-height: 1.6;  
+    margin: 15px; 
+}
+
+/*Specific styling for index page*/
+#index_main {
+    width: auto;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--whiteColor); 
+    border-radius: 8px; 
+
+    img {
+        
+        margin: 10px 0;
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    img:hover {
+        transform: scale(1.05); 
+    }
+}
+
+/*Specific styling for Gallery page*/
+.national_gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url('_images/stadium_background.jpeg');
+    border-radius: 10px;
+    border-style: double;
+    border-color: var(--blueColor);
+    border-width: 10px;
+    background-size: cover;
+    width: 1150px;
+    height: 600px;
+    padding: 20px;
+    margin: 20px auto;
+
+    div{
+        flex: 0 0 calc(25% - 10px);
+        text-align: center;
+    }
+
+    p{
+        color: var(--whiteColor);
+        background-color: rgba(43, 55, 226, 0.6);
+        border-radius: 10px; 
+        text-decoration: underline; 
+        padding: 5px; 
+        width:fit-content;
+        margin: 0 auto;
+    }
+
+    img{
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
+.club_gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url('_images/stadium_background.jpeg');
+    border-radius: 10px;
+    border-style: double;
+    border-color: var(--blueColor);
+    border-width: 10px;
+    background-size: cover;
+    width: 1150px;
+    height: 600px;
+    padding: 15px;
+    margin: 20px auto;
+
+    div{
+        flex: 0 0 calc(25% - 10px);
+        text-align: center;
+    }
+
+    p{
+        color: var(--whiteColor); 
+        background-color: rgba(43, 67, 226, 0.6);
+        border-radius: 10px;
+        text-decoration: underline;
+        padding: 5px; 
+        width:fit-content;
+        margin: 0 auto;
+    }
+
+    img{
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
+#products_services_a_tag{
+    color: var(--blueColor);
+    text-decoration: underline;
+}
+
+/* Specific styling for Products & Services page */
+#products_services_main {
+    max-width: 800px;
+    margin: 20px auto; 
+    padding: 20px;
+    background: var(--whiteColor); 
+    border-radius: 8px; 
+
+    
+}
+
+iframe {
+    display: block; 
+    margin: 20px auto; 
+    border-radius: 8px;  
+}
+
+
+/*Specific styling for contact page*/
+#contact_main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--whiteColor);
+    border-radius: 8px;
+    
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    
+      
+}
+
+/* Styling for adaptive design for smaller screen*/
+@media (max-width: 960px) {
+    header, footer {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0; 
+    }
+
+    .national_gallery, .club_gallery {
+        flex-direction: column;
+        padding: 10px;
+
+        div{
+            flex: 0 0 100%; 
+        }
+        
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    iframe {
+        width: 100%; 
+        height: auto; 
+    }
+}
